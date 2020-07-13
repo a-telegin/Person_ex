@@ -48,7 +48,7 @@ int Validator::ParseBDate (const Person & person)
              throw ExceptionIpnNonDigit();
          }
     }   
-    result = std::stoi (person.ptn.substr (0, 5), nullptr);
+    result = std::stoi (s, nullptr);
     return result;
 }
 
