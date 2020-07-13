@@ -40,7 +40,6 @@ bool Validator::ValidateSex (const Person & person)
 
 int Validator::ParseBDate (const Person & person)
 {
-    int result = 0;    
     std::string s = person.ptn.substr (0, 5);
 
     for(char& c : s) {
@@ -48,8 +47,7 @@ int Validator::ParseBDate (const Person & person)
              throw ExceptionIpnNonDigit();
          }
     }   
-    result = std::stoi (s, nullptr);
-    return result;
+    return std::stoi (s, nullptr);
 }
 
 Sex Validator::ParseSex (const Person & person)
